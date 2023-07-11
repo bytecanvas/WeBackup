@@ -1,0 +1,157 @@
+{
+  // Disabling Welcome Screen on Startup
+  "workbench.welcome.enabled": false,
+
+  // File Auto Save
+  "files.autoSave": "afterDelay",
+
+  // File Fonts
+  "editor.fontFamily": "Fira Code iScript",
+  "editor.fontSize": 16,
+  //"editor.fontWeight": "300", // Light
+  //"editor.fontWeight": "400", // Regular
+  //"editor.fontWeight": "500", // Medium
+  "editor.fontWeight": "600", // Bold
+  "editor.fontLigatures": true,
+
+  // Editor
+  "editor.autoIndent": "full",
+  "editor.lineNumbers": "on",
+  "editor.tabSize": 4,
+
+  // Default end of line character
+  "files.eol": "\n",
+
+  // Workbench Theme
+  "workbench.colorTheme": "Mayukai Mirage Gruvbox Darktooth",
+  "workbench.iconTheme": "simple-icons",
+
+  // Prettier
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+
+  // Rainbow Indent
+  "indentRainbow.ignoreErrorLanguages": ["markdown", "haskell"],
+  // For which languages indent-rainbow should be activated (if empty it means all).
+  "indentRainbow.includedLanguages": ["python", "javascript"], // for example ["nim", "nims", "python"]
+
+  // The delay in ms until the editor gets updated.
+  "indentRainbow.updateDelay": 100, // 10 makes it super fast but may cost more resources
+
+  // TODO-Highlight
+  "todohighlight.isEnable": true,
+  "todohighlight.isCaseSensitive": true,
+  "todohighlight.keywords": [
+    "DEBUG:",
+    "REVIEW:",
+    {
+      "text": "NOTE:",
+      "color": "#ff0000",
+      "backgroundColor": "yellow",
+      "overviewRulerColor": "grey"
+    },
+    {
+      "text": "HACK:",
+      "color": "#000",
+      "isWholeLine": false
+    },
+    {
+      "text": "TODO:",
+      "color": "red",
+      "border": "1px solid red",
+      "borderRadius": "2px", //NOTE: using borderRadius along with `border` or you will see nothing change
+      "backgroundColor": "rgba(0,0,0,.2)"
+      //other styling properties goes here ...
+    }
+  ],
+  "todohighlight.keywordsPattern": "TODO:|FIXME:|\\(([^)]+)\\)", //highlight `TODO:`,`FIXME:` or content between parentheses
+  "todohighlight.defaultStyle": {
+    "color": "orangered",
+    "backgroundColor": "#ffe4e1",
+    "overviewRulerColor": "#ffe4e1",
+    "cursor": "pointer",
+    "border": "1px solid #eee",
+    "borderRadius": "2px",
+    "isWholeLine": true
+    //other styling properties goes here ...
+  },
+  "todohighlight.include": [
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.html",
+    "**/*.php",
+    "**/*.css",
+    "**/*.scss"
+  ],
+  "todohighlight.exclude": [
+    "**/node_modules/**",
+    "**/bower_components/**",
+    "**/dist/**",
+    "**/build/**",
+    "**/.vscode/**",
+    "**/.github/**",
+    "**/_output/**",
+    "**/*.min.*",
+    "**/*.map",
+    "**/.next/**"
+  ],
+
+  "todohighlight.maxFilesForSearch": 5120,
+  "todohighlight.toggleURI": false,
+
+  // ES-Lint
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": ["javascript"],
+
+  // Auto Close Tag
+  "auto-close-tag.enableAutoCloseTag": true,
+  "auto-close-tag.activationOnLanguage": [
+    "xml",
+    "php",
+    "blade",
+    "ejs",
+    "jinja",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "plaintext",
+    "markdown",
+    "vue",
+    "liquid",
+    "erb",
+    "lang-cfml",
+    "cfml",
+    "HTML (Eex)"
+  ],
+
+  // Auto Rename Tag
+  "auto-rename-tag.activationOnLanguage": ["html", "xml", "php", "javascript"],
+
+  // Markdown Lint
+  "[markdown]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
+  },
+
+  "editor.codeActionsOnSave": {
+    "source.fixAll.markdownlint": true
+  },
+
+  // Glob patterns for excluding folders and files
+  "files.exclude": {
+    "**/*.build": true,
+    "**/*.git": true,
+    "**/*.err": true,
+    "**/*.rec": true,
+    "**/*.log": true,
+    "**/*.evt": true,
+    "**/buildfre.*": true,
+    "**/buildchk.*": true,
+    "**/.DS_Store": true
+  }
+}
